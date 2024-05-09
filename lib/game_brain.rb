@@ -27,6 +27,7 @@ class GameBrain
     COLORS.include?(input) && !user_colors.include?(input)
   end
 
+  # updating colors indicator
   def check_selected_colors(picked_colors)
     (0...4).each do |i|
       if @colors_code.include?(picked_colors[i])
@@ -58,6 +59,7 @@ class GameBrain
     @computer_colors
   end
 
+  # check if selected color is the right color and in the right position
   def right_color_right_position
     index = INDEX - @selected_indexes
     index.each do |i|
@@ -71,6 +73,7 @@ class GameBrain
     end
   end
 
+  # check if selected color in color code
   def right_colors
     index = INDEX - @selected_indexes
     index.each do |i|
@@ -81,6 +84,7 @@ class GameBrain
     end
   end
 
+  # detecting wrong selected colors
   def wrong_colors
     index = INDEX - @selected_indexes
     index.each do |i|
