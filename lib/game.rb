@@ -41,7 +41,7 @@ class Game < GameBrain
   end
 
   def user_input
-    puts "\nRemaining guesses #{remaining_guesses}.\n"
+    puts "\nRemaining guesses #{remaining_guesses}." unless @first_turn
     print COLORS if @game_mode == 'guesser'
     puts
     user_colors = []
